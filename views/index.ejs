@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<style>
+		fieldset {
+			max-width: 50%;
+			margin-left: 338px;
+		}
+	</style>
+</head>
+
+<body>
+	<fieldset>
+		<div id="wrapper" style="background:grey; color: white; max-height: 70%;">
+			<center>
+				<h1>Welcome to Quoting Dojo</h1>
+				<!-- dispalying messages -->
+
+				<%- JSON.stringify(messages) %>
+				<!-- based on the structure of your messages, determine how to display them -->
+				<% if(messages.registration) { %>
+				<% for (var x of messages.registration) { %>
+				<h3><%= x %></h3>
+				<% } %>
+				<% } %>
+				<form action='/add' method=post>
+					<table class="table table-sm">
+						<tbody>
+							<tr>
+								<h3>Your Name:<input type="text" name="name"></h3>
+							</tr>
+							<td>
+								<h3>Your Quote:<input type="text" name="message"></h3>
+							</td>
+						</tbody>
+					</table>
+					<button type="submit" style="background: black; color: white;">Add a Quote</button>
+				</form>
+			</center>
+		</div>
+	</fieldset>
+</body>
+
+</html>

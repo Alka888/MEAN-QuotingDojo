@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<style>
+	fieldset {
+		max-width: 50%;
+		margin-left: 338px;
+	}
+</style>
+</head>
+
+<body>
+	<fieldset>
+		<center>
+			<div id="wrapper" style="width:100%; height: 50%; background: grey; color: white;">
+				<h1>Here are the Awesome Quotes!</h1>
+				<% quotes.forEach(function (quote) { %>
+				<p><%= quote.name %></p>
+				<p><%= quote.message %></p>
+				<p><%= quote.createdAt %></p>
+				<br>
+				<% }) %>
+			</div>
+		</center>
+	</fieldset>
+</body>
+
+</html>
